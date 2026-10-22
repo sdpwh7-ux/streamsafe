@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "streamsafe"
+version = "0.1.0"
+description = "OpenAI-compatible client that always streams, so long reasoning calls survive proxy timeouts (Cloudflare 524)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = ["requests>=2.25"]
+
+[project.scripts]
+streamsafe = "streamsafe.__main__:main"
+
+[tool.setuptools]
+packages = ["streamsafe"]
